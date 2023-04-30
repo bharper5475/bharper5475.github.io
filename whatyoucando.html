@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BEN IS GAY</title>
+	<title>WHAT YOU CAN DO</title>
 	<link rel="icon" href="docs/assets/images/favicons/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="docs/assets/images/favicons/favicon.ico" type="image/x-icon">
 	<style>
@@ -54,21 +54,18 @@
 	</style>
 </head>
 <body>
-	<h1>BEN IS GAY</h1>
-	<div id="countdown"></div>
-	<img src="docs/assets/images/froge.gif" alt="Froge" width="480" height="320" title="Ben circa 2013">
-
+	<h1>WHAT YOU CAN DO</h1>
 	<div style="background-color: #FF00FF; padding: 20px;">
 		<nav>
-			<a href="howdoweknow.html">How do we know?</a>
-			<a href="whendidthishappen.html">When did this happen?</a>
-			<a href="whatyoucando.html">What you can do</a>
+			<a href="howdoweknow.html">how do we know?</a>
+			<a href="index.html">BEN IS GAY</a>
+			<a href="whendidthishappen.html">when did this happen?</a>
 		</nav>
-	</div>
+</div>
 
-	<div id="main-content" style="padding: 20px;">
+<div id="main-content" style="padding: 20px;">
 	<p>Main content placeholder</p>
-	</div>	
+</div>	
 
 <div style="background-color: #CC00CC; padding: 20px; margin-top: 50px;">
 	<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
@@ -148,33 +145,6 @@
 		BEN IS GAY™ is a registered trademark under BIG RAT LLC and its parent company RIG International Group
 	</p>
 </div>
-
-	<script>
-		const countdownElement = document.getElementById("countdown");
-		const countdownEndDate = new Date("May 12, 2024 00:00:00").getTime();
-
-		function updateCountdown() {
-			const now = new Date().getTime();
-			const timeRemaining = countdownEndDate - now;
-
-			const weeks = Math.floor(timeRemaining / (1000 * 60 * 60 * 24 * 7));
-			const days = Math.floor((timeRemaining % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-			const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-			const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-			countdownElement.innerHTML = `${weeks}w ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-
-
-		if (timeRemaining < 0) {
-			clearInterval(updateCountdownInterval);
-			countdownElement.innerHTML = "EXPIRED";
-		}
-	}
-
-	updateCountdown();
-	const updateCountdownInterval = setInterval(updateCountdown, 1000);
-	</script>
+	
 </body>
 </html>
