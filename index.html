@@ -56,5 +56,30 @@
 			<a href="#">What you can do</a>
 		</nav>
 	</div>
+<script>
+	const countdownElement = document.getElementById("countdown");
+	const countdownEndDate = new Date("May 12, 2024 00:00:00").getTime();
+
+	function updateCountdown() {
+		const now = new Date().getTime();
+		const timeRemaining = countdownEndDate - now;
+
+		const weeks = Math.floor(timeRemaining / (1000 * 60 * 60 * 24 * 7));
+		const days = Math.floor((timeRemaining % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+		const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+		const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+		countdownElement.innerHTML = `${weeks}w ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+		if (timeRemaining < 0) {
+			clearInterval(updateCountdownInterval);
+			countdownElement.innerHTML = "EXPIRED";
+		}
+	}
+
+	updateCountdown();
+	const updateCountdownInterval = setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
