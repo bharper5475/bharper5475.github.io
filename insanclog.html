@@ -37,28 +37,30 @@
         }
     </style>
     <script>
-        function validatePassword() {
-            // Define an array with the list of passwords
-            const passwords = ['sbg', 'ernie', 'keebler', 'rat', 'stepdaddy', 'dankestmumemes'];
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent form submission
+                
+                // Define an array with the list of passwords
+                const passwords = ['sbg', 'ernie', 'keebler', 'rat', 'stepdaddy', 'dankestmumemes'];
+                
+                // Get the user entered password from the input field
+                const userPassword = document.getElementById('password').value;
 
-            // Get the user entered password from the input field
-            const userPassword = document.getElementById('password').value;
-
-            // Check if entered password is in the list of valid passwords
-            if (passwords.includes(userPassword)) {
-                // Redirect to "insanc.html" if access is granted
-                window.location.href = "insanc.html";
-            } else {
-                alert('Access denied.');
-                // Prevent form submission
-                return false;
-            }
-        }
+                // Check if entered password is in the list of valid passwords
+                if (passwords.includes(userPassword)) {
+                    // Redirect to "insanc.html" if access is granted
+                    window.location.href = "insanc.html";
+                } else {
+                    alert('Access denied.');
+                }
+            });
+        });
     </script>
 </head>
 <body>
     <h1>ARE YE WORTHY?</h1>
-    <form onsubmit="return validatePassword();">
+    <form id="loginForm">
         <label for="password">Enter Password:</label>
         <input type="password" id="password" name="password" required>
         <br><br>
