@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inner Sanctum Login</title>
+    <style>
+        /* Your styles remain unchanged */
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: red;
+            font-size: 2.5em;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            color: red;
+            font-size: 1.2em;
+            display: block; /* To move the label below the input field */
+        }
+        input[type="password"] {
+            width: 150px; /* Adjust the width as desired */
+            padding: 0px;
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        function validatePassword() {
+            // Define an array with the list of passwords
+            const passwords = ['sbg', 'ernie', 'keebler', 'rat', 'stepdaddy', 'dankestmumemes'];
+
+            // Get the user entered password from the input field
+            const userPassword = document.getElementById('password').value;
+
+            // Check if entered password is in the list of valid passwords
+            if (passwords.includes(userPassword)) {
+                // Redirect to "insanc.html" if access is granted
+                window.location.href = "insanc.html";
+            } else {
+                alert('Access denied.');
+                // Prevent form submission
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>ARE YE WORTHY?</h1>
+    <form onsubmit="return validatePassword();">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
