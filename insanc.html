@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>INNER SANCTUM</title>
@@ -13,23 +13,478 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             height: 100vh;
+            position: relative;
         }
+
         h1 {
-            font-size: 3em; /* Increase font size */
-            color: red; /* Spooky red color */
+            font-size: 3em;
+            color: red;
+            padding-right: 70px;
         }
+
         a {
             color: red;
             text-decoration: none;
             font-size: 1.2em;
             margin-top: 20px;
         }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 2px solid red;
+            padding: 10px 20px;
+            color: red;
+        }
+
+        .axis-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-align: center;
+        }
+
+        .x-axis-label {
+            margin-bottom: 0px;
+        }
+
+        .y-axis-label {
+            margin-right: 17px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 0px;
+            left: 23px;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(100vh - 60px);
+            /* Adjusted height to exclude back button */
+        }
+
+        .table-container {
+            max-height: 60vh;
+            /* or any other value that you find appropriate */
+            /* enables vertical scrolling */
+            padding-right: 100px;
+        }
+
+        .x-axis-label {
+            color: red;
+            font-size: 1.2em;
+            margin-bottom: 0px;
+            /* Added margin to separate it from the table */
+        }
+
+        h2 {
+            font-size: 2em;
+            color: red;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: decimal;
+            color: red;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-style: italic;
+        }
+
+        .rank-section {
+            padding-right: 40px;
+        }
+
+        .rank-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        .rank-entry>div:first-child {
+            flex: 2;
+            max-width: 60%;
+            margin-right: 10px;
+            text-align: left;
+        }
+
+        .rank-entry .rank-attributes {
+            flex: 1;
+            text-align: right;
+            padding-left: 20px;
+        }
+
+        .rank-attributes {
+            text-align: right;
+            white-space: nowrap;
+        }
     </style>
 </head>
+
 <body>
+    <a href="index.html" class="back-button">Back</a>
+
     <h1>INNER SANCTUM</h1>
-    <a href="index.html">Back</a>
+
+    <div class="table-container">
+        <div class="x-axis-label" style="color: red; font-size: 1.2em;">LONGEST BLACK WOLF STREAK</div>
+        <div style="display: flex; align-items: center;">
+            <!-- Vertical Y-axis label -->
+            <div class="y-axis-label"
+                style="color: red; font-size: 1.2em; writing-mode: vertical-rl; transform: rotate(180deg);">
+                BLACK WOLVES
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <!-- Top-left cell for the X-axis label -->
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>7+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1-3</strong></td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4-6</strong></td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7-9</strong></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10-12</strong></td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>13-15</strong></td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>15+</strong></td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <h2 style="padding-right: 60px" ;>RANK</h2>
+    <div style="padding-right: 100px" ;>
+        <ol>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>WHITE WOLF AVATAR</strong>
+                        <p>Hark! The eyes of mortal men are blinded by the brilliant light that emanates from your very
+                            being. (+10 Radiant)
+                            <br>
+                            <br>Never before has a being as pure set foot on the planes of man. Summoned forth from the
+                            astral realm which tainted souls dare not tread, you vanquish the forces of the dark by gaze
+                            alone. (+5 Perception)
+                            <br>
+                            <br>But be warned, wherever your light shines brightest, so too will the shadows grow dark.
+                            (Vile Gaze)
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>+10 Radiant</p>
+                        <p>+5 Perception</p>
+                        <p>Vile Gaze</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>LIGHT BRINGER</strong>
+                        <p>Noble Priest, Your efforts are seen. One as sanctimonious as you is a rare sight indeed, and
+                            the source of your determination stems from your hatred of the black ones. (+10 Anger)
+                            <br>
+                            <br>Though not holy enough to be deified, your commitment to the way of the white wolf has
+                            brought with it a soft glow that helps you stay true to your pledge in times of uncertainty.
+                            (+7 Radiant)
+                            <br>
+                            <br>An unintended side effect of your piety has rendered you completely clean in all ways.
+                            You have no scent, and make very little noise when moving (+5 Stealth)
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>+10 Anger</p>
+                        <p>+7 Radiant</p>
+                        <p>+5 Stealth</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>LUMINOUS SENTINEL</strong>
+                        <p>A trusted ally is better found nowhere if not in the halls of the Order of the Luminous Path.
+                            (+5 Radiant)
+                            <br>
+                            <br>Cursed with a high level truth spell until their pact of luminosity is broken, Sentinels
+                            are unable to lie, and often must come up with clever ways of speaking to not give away
+                            valuable intel. (+5 Cunning)
+                            <br>
+                            <br>Though mainly trained in the art of the spear, Sentinels are well versed in support
+                            magic, although their repertoire is limited to spells with some reference to light in their
+                            name. (+7 Spears OR +5 Light Magic)
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>+5 Radiant</p>
+                        <p>+5 Cunning</p>
+                        <p>+7 Spears</p>
+                        <p>OR</p>
+                        <p>+5 Light Magic</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>ACOLYTE OF THE DAWN</strong>
+                        <p>
+                            ...
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes"> <!-- Padding for some space between -->
+                        <p>----------------</p>
+                        <p>+5 Radiant</p>
+                        <p>+3 Protection</p>
+                        <p>+3 Resilience</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>INITIATE</strong>
+                        <p>Though but an initiate unto the ways of the white wolf, Initiates offer surprising
+                            versitility due to thier varied backgrounds. (+3 Melee OR +3 Longswords Or +3 Elemental
+                            Magic)
+                            <br>
+                            <br>Well versed in the ways of the Vile due to the churches waning influence, Initiates
+                            never the less may choose to secretly hold on to what wretchedness they might have brought
+                            with them into the church (+3 Radiant OR +3 Vile)
+                            <br>
+                            <br>In thier initial course of study, Initiates may choose one of three Schools of
+                            discipline offered by the Academy. (+3 Any magic besides Light and Dark OR +3 Any Weapon
+                            Skill OR +3 any social skill)
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>+3 Melee</p>
+                        <p>OR</p>
+                        <P>+3 Longswords</P>
+                        <p>OR</p>
+                        <p>+3 Elem. Magic</p>
+                        <p>+3 Radiant</p>
+                        <p>OR</p>
+                        <p>+3 Vile</p>
+                        <p>+3 Any non wolf Magic</p>
+                        <p>OR</p>
+                        <p>+3 Any Weapon Skill</p>
+                        <p>OR</p>
+                        <P>+3 any social skill</P>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>UNCARVED SOUL</strong>
+                        <p>Your soul is an unstained canvas. Through some celestial error, you are unable to be swayed
+                            by the forces of light or dark. (True Neutrality)
+                            <br>
+                            <br>Though Utterly unremarkable, you are mediocre in nearly every skill, and invaluable when
+                            rounding out adventuring parties. (Uncarved Block)
+                            <br>
+                            <br>Through sheer force of will, each day you may concetrate on one skill to become adept
+                            in, though this expires after 24 hours and must be reapplied (Zen Mastery)
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>True Neutrality</p>
+                        <p>Uncarved Block</p>
+                        <p>Zen Mastery</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>RAPSCALLION</strong>
+                        <p>A true trickster, the rapscallion revels in deciet and subterfuge. Though unintentional, he
+                            is kind of a piece of shit. (+3 Vile, +3 Deception)
+                            <br>
+                            <br>Never one to be
+                            <br>
+                        </p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>+3 Vile, +3 Deception</p>
+                        <P>
+                    </div>
+                    <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>FALLEN WRETCH</strong>
+                        <p>Subtext placeholder for entry 8.</p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>LUPINE SHAMAN</strong>
+                        <p>Subtext placeholder for entry 8.</p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>DARKBOUND WOLF-KIN</strong>
+                        <p>Subtext placeholder for entry 8.</p>
+                        <p>PUNISHMENT: NONE</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+            <li>
+                <div class="rank-entry">
+                    <div>
+                        <strong>BLACK WOLF AVATAR</strong>
+                        <p>You embody the filth ridden abbyss. Once a man, your form is amorphous,
+                            molding itsself to fit what ever situation you find yourself drawn to. (Abyss Mastery)
+                            <br>
+                            <br>The shadows bow to your whims, and light seems to bend and avoid you like a scared animal
+                            seeking refuge from the foul beast that you are. (Shadow Mastery)
+                            <br>
+                            <br>Irredeamably, unsalvageably dark. Twisted beyond comprehension, can it even be said that you are
+                            evil? or are you simply the unseen beast that lurks in us all? (+10 Vile)
+                        </p>
+                        <p>PUNISHMENT: Eternal Darkness; You cannot be in the light for more than 1d4 seconds, calculated every
+                            time you are perceived by an NPC. If seen, you take 2d4 damage per turn until out of sight.</p>
+                    </div>
+                    <div class="rank-attributes">
+                        <p>----------------</p>
+                        <p>Abyss Mastery</p>
+                        <p>Shadow Mastery</p>
+                        <p>+10 Vile</p>
+                    </div>
+                </div>
+                <br>
+            </li>
+        </ol>
+    </div>
 </body>
-</html>
