@@ -8,16 +8,42 @@
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
+            display: flex; /* Added for flex layout */
+            flex-direction: column; /* Organizes items in a column */
+            align-items: center; /* Centers items horizontally */
         }
         h1 {
             font-size: 76pt;
-            margin-top: 50px;
+            margin-top: 50px; /* Adjusted for better spacing */
+            margin-bottom: 20px; /* Space between title and subtitle */
+        }
+        h2 {
+            font-size: 36pt;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 50px; /* Space between subtitle and team choices */
         }
         .links {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 200px;
+            display: flex; /* Use flex layout */
+            justify-content: space-around; /* Distribute space around items */
+            align-items: center; /* Align items vertically */
+            width: 100%; /* Full width */
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .team {
+            text-align:center;
+            flex: 4;
+        }
+        .team img {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 15px 10px #0000ff;
+        }
+        .team-description {
+            font-size: 18pt;
+            margin-top: 10px;
+            text-align: left;
         }
         a {
             color: white;
@@ -31,10 +57,26 @@
 </head>
 <body>
     <h1>DRY JANUARY: THE FIRST</h1>
+    <h2>CHOOSE YOUR FATE</h2>
     <div class="links">
-        <div><a href="link-to-blue-team.html">BLUE Team</a></div>
-        <div><a href="link-to-red-team.html">RED Team</a></div>
+        <div class="team">
+            <img src="docs/assets/images/white.png" alt="Nice Ferret">
+            <div><a href="black.png">Arctic Ferrets</a></div>
+            <p class="team-description">The Arctic Ferret, a creature of legend and natural marvel, resides in the frost-laden realms of the far north. This ethereal mammal, resembling its earthly ferret cousins, boasts a strikingly elegant body, about two feet in length, cloaked in a shimmering white fur that glistens like fresh snow under the moonlight. Its fur, imbued with magical frost resistance, allows the Arctic Ferret to roam the icy tundras with ease. Uniquely, the tips of its fur emit a soft bioluminescence during the polar nights, creating a mystical aura around it. This glow, steeped in folklore, is said to guide lost travelers to safety. The Arctic Ferret's eyes, a piercing shade of icy blue, reflect the auroras overhead, enhancing its mystical presence.
+
+                Adapted to the harsh climates, this creature's physique is a remarkable fusion of elegance and resilience. Its slender, elongated body, accentuated by a bushy tail, aids in swift navigation through snow-laden landscapes. The paws, slightly webbed and covered in thick fur, act as natural snowshoes, preventing the Arctic Ferret from sinking into deep snow. Legends tell of its ethereal abilities to phase through ice and snow, appearing and disappearing like a wisp of winter air. In folklore, it is revered as a spirit guardian of the Arctic, a symbol of purity and endurance.
+                
+                In the realm of magic and myth, the Arctic Ferret is said to possess an array of mystical powers. Its most renowned ability is to conjure gentle snowstorms, a skill used to cloak itself from predators and humans alike. Enveloped in these self-made blizzards, the Arctic Ferret becomes invisible, a ghostly figure in the vast arctic wilderness. Whispered tales among northern tribes speak of its ability to communicate through dreams, offering wisdom and foresight to those deemed worthy. As a being intertwined with both the natural and the supernatural, the Arctic Ferret stands as a testament to the wonders and mysteries that the wild corners of our world, both real and imagined, hold.</p>
+        </div>
+        <div class="team">
+            <img src="docs/assets/images/black.png" alt="Mean Ferret">
+            <div><a href="link-to-red-team.html">Swamp Ferrets</a></div>
+            <p class="team-description">The Swamp Ferret, a creature as enigmatic as the murky waters it inhabits, thrives in the dense, mist-laden swamps of mythical realms. This elusive mammal, a cousin of the common ferret, is adorned with sleek, dark green fur, mirroring the verdant foliage of its swampy home. The fur has a unique property; it is coated with a natural, oily substance that repels water and mud, keeping the Swamp Ferret clean as it navigates through the swamp. Its eyes, glowing a vivid emerald green, pierce through the dense fog, and folklore claims they can see the true nature of things, be it magical or mundane.
+
+                Adapted to an amphibious lifestyle, the Swamp Ferret's body is a marvel of natural and magical design. It possesses webbed paws, perfect for swimming in swamp waters, and a long, flexible body that allows it to slither through narrow passages and thick underbrush with ease. Its tail, longer than its body, acts as a rudder in water and a balance aid on land. According to legend, the Swamp Ferret can breathe underwater, and some stories even suggest it can control the water level in its swamp, protecting its territory from intruders.
+                
+                In the realm of magic, the Swamp Ferret is revered as a guardian of ancient secrets and a keeper of balance in the swamp's ecosystem. It is believed to have the ability to purify water with a mere touch, a trait seen as a blessing among the creatures and people living near its habitat. The Swamp Ferret is also said to possess a hypnotic song, which it uses to communicate with other creatures of the swamp and to ward off threats. Its presence in folklore symbolizes adaptability, cunning, and the mysterious allure of untamed nature.</p>
+        </div>
     </div>
-    <p>CHOOSE YOUR FATE</p>
 </body>
 </html>
