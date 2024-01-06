@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHOP</title>
+    <style>
+    body {
+        background-color: blue;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex; /* Added for flex layout */
+            flex-direction: column; /* Organizes items in a column */
+            align-items: center; /* Centers items horizontally */
+            
+    }
+    h1 {
+            font-size: 76pt;
+            margin-top: 50px; /* Adjusted for better spacing */
+            margin-bottom: 20px; /* Space between title and subtitle */
+        }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        border: 2px white
+        
+    }
+    
+    .box {
+        width: 600px; /* Adjust width as needed */
+        height: 200px; /* Adjust height as needed */
+        margin-bottom: 50px;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        font-size: 16pt;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    
+    }
+
+    .box>* {
+        flex: 1 1 160px;
+    }
+    
+    .box img {
+        max-width: 100%;
+        max-height: 80%;
+        margin-bottom: 10px;
+    }
+    
+    .box:last-child {
+        margin-bottom: 0;
+    }
+    .links {
+            display: flex; /* Use flex layout */
+            justify-content: space-around; /* Distribute space around items */
+            align-items: center; /* Align items vertically */
+            width: 100%; /* Full width */
+            margin-right: 20px;
+            margin-left: 20px;
+            color: white;
+        }
+        a {
+            color: white;
+            font-size: 24pt;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="links">
+        <div><a style="font-size: 14pt;" href="index.html">HOME</a></div>
+        <div><a style="font-size: 14pt;" href="appendix.html">APPENDIX</a></div>
+    </div>
+    <h1>SHOP</h1>
+    <div class="container">
+        <div class="column">
+            <div class="box" id="box1"><img src="docs/assets/images/ben.png" alt=""><p>BAG OF IAMS DOG FOOD</p></div>
+            <div class="box" id="box2"><img src="" alt=""><p>Item Description</p></div>
+            <!-- Add more boxes as needed -->
+        </div>
+        <div class="column">
+            <div class="box" id="box9"><img src="" alt=""><p>Item Description</p></div>
+            <div class="box" id="box10"><img src="" alt=""><p>Item Description</p></div>
+            <!-- Add more boxes as needed -->
+        </div>
+    </div>
+</body>
+</html>
