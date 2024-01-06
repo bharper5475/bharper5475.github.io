@@ -30,25 +30,25 @@
     }
 
     .wrapper {
-        border: 2px white
-        
+        border: 2px white 
     }
     
     .box {
-        width: 600px; /* Adjust width as needed */
-        height: 200px; /* Adjust height as needed */
-        margin-bottom: 50px;
-        border: 2px solid white;
-        border-radius: 10px;
-        background-color: white;
-        color: black;
-        font-size: 16pt;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        width: 800px; /* Adjust width as needed */
+    height: auto; /* Changed to auto for dynamic height */
+    margin-bottom: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16pt;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Added padding */
+    box-sizing: border-box;
     
     }
 
@@ -57,9 +57,10 @@
     }
     
     .box img {
-        max-width: 100%;
-        max-height: 80%;
-        margin-bottom: 10px;
+        width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensures image covers the area without distorting */
+    margin-bottom: 10px;
     }
     
     .box:last-child {
