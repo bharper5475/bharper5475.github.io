@@ -80,9 +80,19 @@
             font-size: 24pt;
             text-decoration: none;
         }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <audio id="soundEffect" src="docs/assets/audio/scree.mp3"></audio>
+    <script type="text/javascript">
+        document.getElementById('1').addEventListener('click', function() {
+            var sound = document.getElementById('soundEffect');
+            sound.play();
+        });
+    </script>
     <div class="links">
         <div><a style="font-size: 14pt;" href="index.html">DRY JANUARY: THE FIRST</a></div>
         <div><a style="font-size: 14pt;" href="appendix.html">APPENDIX</a></div>
@@ -90,7 +100,7 @@
     <h1>SHOP</h1>
     <div class="container">
         <div class="column">
-            <div class="box" id="box1"><img src="docs/assets/images/ben.png" alt=""><p>BAG OF IAMS DOG FOOD</p></div>
+            <div class="box" id="box1"><img src="docs/assets/images/ben.png" alt=""><p><a id="1" style="color: black" href="">BAG OF IAMS DOG FOOD</a></p></div>
             <div class="box" id="box2"><img src="docs/assets/images/chalice.jpg" alt=""><p>CHALICE OF UNSPEAKABLE KNLOWLEDGE
                 <BR>The Chalice is enchaned with fur-magic. Whomever drinks from it may know the outcome of the battle before it happens, and choose to run if they want to.</BR>
             </p></div>
